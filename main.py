@@ -6,7 +6,7 @@ import tempfile
 
 from aiogram import Bot, Dispatcher, Router, types
 from aiogram.filters import CommandStart, StateFilter
-from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton, InputMediaVideo
+from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
 
@@ -65,7 +65,7 @@ MAX_FILE_SIZE = 20 * 1024 * 1024
 
 logging.basicConfig(level=logging.INFO)
 
-bot = Bot(token='7844735010:AAHZuVDSxU88dnxCpjs73KkTVCGuboSoeyE')
+bot = Bot(token=os.environ['TOKEN'])
 dp = Dispatcher()
 router = Router()
 
